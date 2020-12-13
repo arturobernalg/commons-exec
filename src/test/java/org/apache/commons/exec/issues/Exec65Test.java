@@ -55,7 +55,7 @@ public class Exec65Test extends AbstractExecTest {
 
             assertThrows(ExecuteException.class, () -> executor.execute(command));
         } else {
-            testNotSupportedForCurrentOperatingSystem();
+            assertThrows(ExecuteException.class, () -> new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0));
         }
     }
 
@@ -80,7 +80,7 @@ public class Exec65Test extends AbstractExecTest {
 
             assertThrows(ExecuteException.class, () -> executor.execute(command));
         } else {
-            testNotSupportedForCurrentOperatingSystem();
+            assertThrows(ExecuteException.class, () -> new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0));
         }
     }
 
@@ -121,7 +121,7 @@ public class Exec65Test extends AbstractExecTest {
 
             assertThrows(ExecuteException.class, () -> executor.execute(command));
         } else {
-            testNotSupportedForCurrentOperatingSystem();
+            assertThrows(ExecuteException.class, () -> new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0));
         }
     }
 }
